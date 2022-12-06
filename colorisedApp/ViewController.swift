@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet var sliderGreen: UISlider!
     @IBOutlet var sliderBlue: UISlider!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
@@ -32,21 +34,23 @@ class ViewController: UIViewController {
     
     @IBAction func redSliderAction() {
         labelRed.text = String(sliderRed.value)
-        viewWindow.backgroundColor = UIColor(red: 255, green: CGFloat(sliderGreen.value) * 2.55, blue: CGFloat(sliderBlue.value) * 2.55, alpha: 1).withAlphaComponent(CGFloat(sliderRed.value))
+        viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: CGFloat(sliderRed.value))
         //let color: UIColor = .red
         //viewWindow.backgroundColor = viewWindow.backgroundColor?.withAlphaComponent(CGFloat(sliderRed.value))
     }
     
     @IBAction func greenSliderAction() {
         labelGreen.text = String(sliderGreen.value)
-        viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value) * 2.55, green: 255, blue: CGFloat(sliderBlue.value) * 2.55, alpha: 1).withAlphaComponent(CGFloat(sliderGreen.value))
+        //viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value) * 2.55, green: 255, blue: CGFloat(sliderBlue.value) * 2.55, alpha: 1).withAlphaComponent(CGFloat(sliderGreen.value))
+        viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: CGFloat(sliderGreen.value))
         //viewWindow.backgroundColor = viewWindow.backgroundColor?.withAlphaComponent(CGFloat(sliderGreen.value))
         //viewWindow.backgroundColor = viewWindow.backgroundColor.
     }
     
     @IBAction func blueSliderAction() {
         labelBlue.text = String(sliderBlue.value)
-        viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value) * 2.55, green: CGFloat(sliderGreen.value) * 2.55, blue: 255, alpha: 1).withAlphaComponent(CGFloat(sliderBlue.value))
+        //viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value) * 2.55, green: CGFloat(sliderGreen.value) * 2.55, blue: 255, alpha: 1).withAlphaComponent(CGFloat(sliderBlue.value))
+        viewWindow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: CGFloat(sliderBlue.value))
         //viewWindow.backgroundColor = viewWindow.backgroundColor?.withAlphaComponent(CGFloat(sliderBlue.value))
     }
     
@@ -57,5 +61,7 @@ class ViewController: UIViewController {
         slider.minimumTrackTintColor = .white
         slider.maximumTrackTintColor = color
     }
+    
+    
 }
 
