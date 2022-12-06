@@ -33,9 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction func sliderAction() {
         setColor()
-        labelRed.text = string(from: sliderRed)
-        labelBlue.text = string(from: sliderBlue)
-        labelGreen.text = string(from: sliderGreen)
+        setValue(for: labelRed, labelBlue, labelGreen)
     }
     
     private func setupSlider(slider: UISlider, color: UIColor) {
